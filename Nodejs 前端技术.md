@@ -8,15 +8,23 @@
 
 ​	导入：通过require+名字（名字不含类型后缀）
 
-​	导入，导入的结果就是对应文件里exports类里面的方法，变量导出：自己可以通过exports类导出函数，
+​	导入，导入的结果就是对应文件里exports类里面的方法，变量导出：自己可以通过exports类导出函数，`module.export`
 
 ### npm安装系统模块（淘宝cnpm安装）
 
 ​	npm init创建一个包描述文件 / npm install安装一个包
 
-​	npm install package --save 保存到依赖中/ npm install 安装package.json所有依赖
+​	**npm install package --save 保存到依赖中**/ npm install 安装package.json所有依赖
 
 ​	npm install -g 这样是global的安装
+
+​	npm uninstall `package name`
+
+
+
+### 使用module
+
+自定义的module有package.json描述这个包，require执行main js文件，
 
 ## 系统module
 
@@ -55,5 +63,52 @@ fs的`exist stat readdir rename watchFile` 啥的 查文档
 
 js的type应该设置为module，在package.json里`"type": "module"`，这样使用import导包。把自己的代码写成一个包，最后在前端导入使用即可。
 
+```js
+import * as fs from 'fs';
+import fs from 'fs';
+```
 
+前端也能用module，只是要全局得给window赋值
 
+```js
+import defaultExport from "module-name";
+import * as name from "module-name";
+import { export1 } from "module-name";
+import { export1 as alias1 } from "module-name";
+import { export1 , export2 } from "module-name";
+import { export1 , export2 as alias2 , [...] } from "module-name";
+import defaultExport, { export1 [ , [...] ] } from "module-name";
+import defaultExport, * as name from "module-name";
+import "module-name";
+var promise = import("module-name");
+```
+
+```js
+// Exporting individual features
+export let name1, name2, …, nameN; // also var, const
+export let name1 = …, name2 = …, …, nameN; // also var, const
+export function functionName(){...}
+export class ClassName {...}
+
+// Export list
+export { name1, name2, …, nameN };
+
+// Renaming exports
+export { variable1 as name1, variable2 as name2, …, nameN };
+
+// Exporting destructured assignments with renaming
+export const { name1, name2: bar } = o;
+
+// Default exports
+export default expression;
+export default function (…) { … } // also class, function*
+export default function name1(…) { … } // also class, function*
+export { name1 as default, … };
+
+// Aggregating modules
+export * from …; // does not set the default export
+export * as name1 from …; // Draft ECMAScript® 2O21
+export { name1, name2, …, nameN } from …;
+export { import1 as name1, import2 as name2, …, nameN } from …;
+export { default, … } from …;
+```
