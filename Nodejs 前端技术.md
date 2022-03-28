@@ -112,3 +112,9 @@ export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
 export { default, … } from …;
 ```
+
+### 泛前端
+
+- 使用文件最简单的方法是用**script标签**吧文件引入进去，jquery这种还没学。
+- 
+
