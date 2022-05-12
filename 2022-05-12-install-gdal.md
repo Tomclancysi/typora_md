@@ -1,3 +1,10 @@
+---
+layout: post
+title: install gdal
+---
+
+
+
 # 安装gdal遇到py的坑
 
 - python查找module的路径是按照sys.path的路径(是启动解释器时确定的，内容包含环境变量PYTHONPATH的值，site-package的值等等)

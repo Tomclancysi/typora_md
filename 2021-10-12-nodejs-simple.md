@@ -1,3 +1,10 @@
+---
+layout: post
+title:nodejs simple
+---
+
+
+
 # Nodejs 前端技术
 
 ## 开始
@@ -116,5 +123,4 @@ export { default, … } from …;
 ### 泛前端
 
 - 使用文件最简单的方法是用**script标签**吧文件引入进去，jquery这种还没学。
-- 
 

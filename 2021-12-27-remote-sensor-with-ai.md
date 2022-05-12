@@ -1,3 +1,10 @@
+---
+layout: post
+title:remote sensor with ai
+---
+
+
+
 ![image-20211201140927356](pics/image-20211201140927356.png)
 
 ![image-20211201140843556](pics/image-20211201140843556.png)

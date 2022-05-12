@@ -1,3 +1,10 @@
+---
+layout: post
+title: simple spider
+tags: 
+- python
+---
+
 # 爬虫：
 
 header必须要 ctrl + R +正则批量做header
